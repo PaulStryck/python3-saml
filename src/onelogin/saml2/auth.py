@@ -117,6 +117,7 @@ class OneLogin_Saml2_Auth(object):
                 self.__last_assertion_id = response.get_assertion_id()
                 self.__last_authn_contexts = response.get_authn_contexts()
                 self.__authenticated = True
+                self.__last_request_id = response.get_in_response_to()
                 self.__last_assertion_not_on_or_after = response.get_assertion_not_on_or_after()
 
             else:
